@@ -15,7 +15,9 @@ impl Response {
     }
 
     pub fn set_status(&self, status: Status) {
-        unsafe { host::set_status(status as u32); }
+        unsafe {
+            host::set_status(status as u32);
+        }
     }
 }
 
