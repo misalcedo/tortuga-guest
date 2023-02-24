@@ -4,7 +4,7 @@ mod host;
 
 #[derive(Debug, Default, Eq, PartialEq, Ord, PartialOrd, Copy, Clone)]
 pub struct Request {
-    cursor: u32
+    cursor: u32,
 }
 
 impl Read for Request {
@@ -31,6 +31,5 @@ mod tests {
 
         assert_eq!(expected.len(), bytes);
         assert_eq!(&buffer[..bytes], &expected[..]);
-
     }
 }
